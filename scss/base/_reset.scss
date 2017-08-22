@@ -2,6 +2,8 @@
 ====================================================================================================
 ====================================================================================================
 */
+
+
 html, body, div, main, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, button, abbr, acronym, address, big, cite, code,
@@ -16,85 +18,49 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video,
 ::before, ::after {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-decoration: none;
-  box-sizing: border-box; }
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+
+	box-sizing: border-box;
+
+}
 
 /* HTML5 - Older browser support
 ====================================================================== */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+	display: block;
+}
+
 
 /* BODY
 ====================================================================== */
-body {
-  line-height: 1; }
+body { line-height: 1; }
+
 
 /* LISTS - Clear bullets
 ====================================================================== */
-ol, ul {
-  list-style: none; }
+ol, ul { list-style: none; }
+
 
 /* QUOTES
 ====================================================================== */
-blockquote, q {
-  quotes: none; }
-
+blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none; }
+	content: '';
+	content: none;
+}
 
 /* TABLES
 ====================================================================== */
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  font: 1.6rem/1.5 Arial, san-serif; }
-
-body {
-  background-color: #F9F9F9; }
-
-section {
-  display: flex;
-  flex-flow: column;
-  width: 90%;
-  margin: 0 auto; }
-
-header img {
-  display: block;
-  margin: 0 auto; }
-
-article {
-  position: relative;
-  overflow: hidden;
-  border: 0.3rem solid red;
-  margin-bottom: 1rem;
-  height: auto; }
-  article div {
-    display: flex;
-    width: 100%; }
-    article div p {
-      color: #EEE; }
-    article div img {
-      padding-right: 1.2rem; }
-
-figcaption {
-  background: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  bottom: 3rem;
-  width: 100%; }
-
-.rimage {
-  width: 100%; }
+	border-collapse: collapse;
+	border-spacing: 0;
+}

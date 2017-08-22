@@ -1,0 +1,48 @@
+// Utilities
+@import './utils/vars.scss';
+
+@import './base/reset.scss';
+@import './base/basesetup.scss';
+
+body {
+  background-color: #F9F9F9;
+}
+section {
+  display: flex;
+  flex-flow: column;
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+article {
+  position: relative;
+  overflow: hidden;
+  border: 0.3rem solid red;
+  margin-bottom: 1rem;
+  height: auto;
+  div {
+    display: flex;
+    width: 100%;
+    p {
+      color: #EEE;
+    }
+    img {
+      padding-right: 1.2rem;
+    }
+  }
+
+}
+figcaption {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+}
+.rimage {
+  width: 100%;
+}
