@@ -17,22 +17,28 @@ fetch (apiURL, options)
 
 function ImagePopulation(arrayData) {
   arrayData.forEach((item, index) => {
-    imagesSection.insertAdjacentHTML('beforeEnd', `<article>
+    imagesSection.insertAdjacentHTML('beforeEnd', `<figure>
                                                       <img class="rimage"
                                                           src="${item.urls.small}"
                                                           alt="${item.description}"
                                                           srcset="${item.urls.small} 400w, ${item.urls.regular} 600w, ${item.urls.full} 860w">
                                                       <figcaption>
                                                         <div>
-                                                            <img src="./images/user-icon.svg">
+                                                            <img src="./images/user-icon.svg" alt="Icon for the user.">
                                                             <p>${item.user.name}</p>
                                                         </div>
                                                         <div>
-                                                            <img src="./images/heart.svg">
+                                                            <img src="./images/heart.svg" alt="Icon for the amount of likes.">
                                                             <p>${item.likes}</p>
                                                         </div>
                                                       </figcaption>
-                                                    </article>
+                                                    </figure>
                                                       `)
   })
 }
+
+const globe = document.querySelector('header img')
+
+globe.addEventListener('click', () => {
+  globe.classList.add('js-spinGlobe')
+})
