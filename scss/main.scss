@@ -1,106 +1,16 @@
 // Utilities
 @import './utils/vars.scss';
+@import './utils/placeholders.scss';
 
+// Base
 @import './base/reset.scss';
 @import './base/basesetup.scss';
 
-body {
-  background-color: #F9F9F9;
-}
-section {
-  display: flex;
-  flex-flow: column;
-  width: 90%;
-  margin: 0 auto;
-  @media (min-width: 768px) {
-    flex-flow: row wrap;
-    justify-content: space-between;
-  }
-}
-header {
-  width: 90%;
-  margin: 0 auto;
-  padding-bottom: 3rem;
-  h1, p {
-    text-align: center;
-  }
-  h1 {
-    font-size: 2.5rem;
-    @media (min-width: 768px) {
-      font-size: 3.5rem;
-    }
-  }
-  p {
-    font-size: 1.4rem;
-    @media (min-width: 768px) {
-      font-size: 2rem;
-    }
-  }
-  img {
-    display: block;
-    padding-top: 2rem;
-    margin: 0 auto;
-    @media (min-width: 768px) {
-      width: 6rem;
-    }
-  }
-}
-figure {
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1rem;
-  @media (min-width: 768px) {
-    width: 45%;
-  }
-  @media (min-width: 1024px) {
-    width: 32%;
-  }
-  div {
-    display: flex;
-    width: 100%;
-    p {
-      color: #EEE;
-    }
-    img {
-      padding-right: 1.2rem;
-    }
-  }
-  &:hover figcaption {
-    animation: slide-in 0.5s forwards ease-out;
-  }
-}
-figcaption {
-  background: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  bottom: -5rem;
-  width: 100%;
-}
-.rimage {
-  display: block;
-  width: 100%;
-}
-footer {
-  position: relative;
-  bottom: 0;
-  p {
-    text-align: center;
-    font-size: 1.2rem;
-    padding: 1rem;
-    @media (min-width: 768px) {
-      font-size: 1.5rem;
-    }
-  }
-  a { color: #929292; }
-}
-.js-spinGlobe {
-  animation: spin 1s alternate forwards linear;
-  animation-iteration-count: 3;
-}
-@keyframes slide-in {
-  from { bottom: -5rem; }
-  to { bottom: 0rem; }
-}
-@keyframes spin {
-  0% { transform: rotateY(0deg); }
-  100% { transform: rotateY(180deg); }
-}
+// Components
+@import './components/keyframes.scss';
+@import './components/classes.scss';
+
+// Layout
+@import './layout/header.scss';
+@import './layout/imageSection.scss';
+@import './layout/footer.scss';

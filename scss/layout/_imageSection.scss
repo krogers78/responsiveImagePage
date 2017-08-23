@@ -1,0 +1,45 @@
+section {
+  display: flex;
+  flex-flow: column;
+  width: 90%;
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+figure {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  @media (min-width: 768px) {
+    width: 45%;
+  }
+  @media (min-width: 1024px) {
+    width: 32%;
+  }
+  div {
+    display: flex;
+    width: 100%;
+    p {
+      color: #EEE;
+    }
+    img {
+      padding-right: 1.2rem;
+    }
+  }
+  &:hover figcaption {
+    animation: slide-in 0.5s forwards ease-out;
+  }
+}
+figcaption {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: -7rem;
+  padding: 1rem;
+  width: 100%;
+}
+.rimage {
+  display: block;
+  width: 100%;
+}

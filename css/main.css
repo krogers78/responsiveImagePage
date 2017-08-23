@@ -61,20 +61,24 @@ html {
   font-size: 62.5%; }
 
 body {
-  font: 1.6rem/1.5 Arial, san-serif; }
-
-body {
+  font: 1.6rem/1.5 Arial, san-serif;
   background-color: #F9F9F9; }
 
-section {
-  display: flex;
-  flex-flow: column;
-  width: 90%;
-  margin: 0 auto; }
-  @media (min-width: 768px) {
-    section {
-      flex-flow: row wrap;
-      justify-content: space-between; } }
+@keyframes slide-in {
+  from {
+    bottom: -5rem; }
+  to {
+    bottom: 0rem; } }
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg); }
+  100% {
+    transform: rotateY(180deg); } }
+
+.js-spinGlobe {
+  animation: spin 1s alternate forwards linear;
+  animation-iteration-count: 3; }
 
 header {
   width: 90%;
@@ -100,6 +104,16 @@ header {
       header img {
         width: 6rem; } }
 
+section {
+  display: flex;
+  flex-flow: column;
+  width: 90%;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    section {
+      flex-flow: row wrap;
+      justify-content: space-between; } }
+
 figure {
   position: relative;
   overflow: hidden;
@@ -123,7 +137,8 @@ figure {
 figcaption {
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
-  bottom: -5rem;
+  bottom: -7rem;
+  padding: 1rem;
   width: 100%; }
 
 .rimage {
@@ -142,19 +157,3 @@ footer {
         font-size: 1.5rem; } }
   footer a {
     color: #929292; }
-
-.js-spinGlobe {
-  animation: spin 1s alternate forwards linear;
-  animation-iteration-count: 3; }
-
-@keyframes slide-in {
-  from {
-    bottom: -5rem; }
-  to {
-    bottom: 0rem; } }
-
-@keyframes spin {
-  0% {
-    transform: rotateY(0deg); }
-  100% {
-    transform: rotateY(180deg); } }
