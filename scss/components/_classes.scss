@@ -2,3 +2,9 @@
   animation: spin 1s alternate forwards linear;
   animation-iteration-count: 2;
 }
+.rimage {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
