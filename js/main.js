@@ -1,6 +1,6 @@
-const apiURL = 'https://api.unsplash.com/search/photos/?query=travel&client_id=3c8ef444b6f9284acd6886216ac7ec6b0f062a88e4b4211e6314278df06276ff'
+const apiURL = 'https://api.unsplash.com/search/photos/?query=rollercoaster&client_id=3c8ef444b6f9284acd6886216ac7ec6b0f062a88e4b4211e6314278df06276ff'
 const imageSection = document.querySelector('#imagesSection')
-const options = { method: 'GET' }
+const options = { method: 'GET'}
 
 fetch (apiURL, options)
   .then(response => response.json())
