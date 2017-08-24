@@ -1,14 +1,11 @@
 const apiURL = 'https://api.unsplash.com/search/photos/?query=travel&client_id=3c8ef444b6f9284acd6886216ac7ec6b0f062a88e4b4211e6314278df06276ff'
 const imageSection = document.querySelector('#imagesSection')
 const options = { method: 'GET' }
-let data = []
 
-fetch ('./js/TEMPFILE.json', options)
+fetch (apiURL, options)
   .then(response => response.json())
   .then(responseAsJson => {
-    data = responseAsJson.results
-    console.log(data)
-
+    let data = responseAsJson.results
     ImagePopulation(data)
   })
     .catch(error => {
@@ -16,29 +13,37 @@ fetch ('./js/TEMPFILE.json', options)
     })
 
 function ImagePopulation(arrayData) {
+  let imagesString = ''
+
   arrayData.forEach((item, index) => {
-    imagesSection.insertAdjacentHTML('beforeEnd', `<figure>
-                                                      <img class="rimage"
-                                                          src="${item.urls.small}"
-                                                          alt="${item.description}"
-                                                          srcset="${item.urls.small} 400w, ${item.urls.regular} 600w, ${item.urls.full} 860w">
-                                                      <figcaption>
-                                                        <div>
-                                                            <img src="./images/user-icon.svg" alt="Icon for the user.">
-                                                            <p>${item.user.name}</p>
-                                                        </div>
-                                                        <div>
-                                                            <img src="./images/heart.svg" alt="Icon for the amount of likes.">
-                                                            <p>${item.likes}</p>
-                                                        </div>
-                                                      </figcaption>
-                                                    </figure>
-                                                      `)
+
+    imagesString +=`<figure>
+                      <img class="rimage"
+                          src="${item.urls.small}"
+                          alt="${item.description}"
+                          srcset="${item.urls.small} 400w, ${item.urls.regular} 1080w">
+                      <figcaption>
+                        <div>
+                            <img src="./images/user-icon.svg" alt="Icon for the user.">
+                            <p>${item.user.name}</p>
+                        </div>
+                        <div>
+                            <img src="./images/heart.svg" alt="Icon for the amount of likes.">
+                            <p>${item.likes}</p>
+                        </div>
+                      </figcaption>
+                    </figure>
+                      `
   })
+  imagesSection.innerHTML = imagesString
 }
 
 const globe = document.querySelector('header img')
 
 globe.addEventListener('click', () => {
-  globe.classList.add('js-spinGlobe')
+  if (globe.classList.contains('js-spinGlobe')) {
+    globe.classList.remove('js-spinGlobe')
+  } else {
+    globe.classList.add('js-spinGlobe')
+  }
 })
