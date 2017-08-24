@@ -3,7 +3,7 @@ const imageSection = document.querySelector('#imagesSection')
 const options = { method: 'GET' }
 let data = []
 
-fetch (apiURL, options)
+fetch ('./js/TEMPFILE.json', options)
   .then(response => response.json())
   .then(responseAsJson => {
     data = responseAsJson.results
