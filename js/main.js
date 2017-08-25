@@ -1,4 +1,4 @@
-const apiURL = 'https://api.unsplash.com/search/photos/?query=rollercoaster&client_id=3c8ef444b6f9284acd6886216ac7ec6b0f062a88e4b4211e6314278df06276ff'
+const apiURL = 'https://api.unsplash.com/search/photos/?query=rollercoaster&per_page=9&client_id=3c8ef444b6f9284acd6886216ac7ec6b0f062a88e4b4211e6314278df06276ff'
 const imageSection = document.querySelector('#imagesSection')
 const options = { method: 'GET'}
 
